@@ -29,9 +29,7 @@ namespace opengl.models.viewer {
 
     public float getLength() => length;
 
-    public bool isSet() {
-      return (texIndex != NO_INDEX) && (normalIndex != NO_INDEX);
-    }
+    public bool isSet() => (texIndex != NO_INDEX) && (normalIndex != NO_INDEX);
 
     public bool hasSameTextureAndNormal(int texIndexOther, int normalIndexOther) {
       return (texIndexOther == texIndex) && (normalIndexOther == normalIndex);

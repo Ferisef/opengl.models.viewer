@@ -91,6 +91,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="shaders\shader.frag" />
+    <None Include="shaders\shader.vert" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir $(TargetDir)\shaders
+xcopy $(ProjectDir)\shaders\shader.vert $(TargetDir)\shaders
+xcopy $(ProjectDir)\shaders\shader.frag $(TargetDir)\shaders</PostBuildEvent>
+  </PropertyGroup>
 </Project>
