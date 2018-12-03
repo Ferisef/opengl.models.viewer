@@ -2,7 +2,7 @@
 
 namespace opengl.models.viewer {
   /// <summary>
-  /// Represents entity.
+  /// Entity.
   /// </summary>
   class Entity {
     private RawModel model;
@@ -50,10 +50,6 @@ namespace opengl.models.viewer {
       rz += z;
     }
 
-    public void setScale(float scale) {
-      this.scale = scale;
-    }
-
     public RawModel getModel() => model;
 
     public Vector3 getPosition() => position;
@@ -63,6 +59,10 @@ namespace opengl.models.viewer {
     public float getRY() => ry;
 
     public float getRZ() => rz;
+
+    public void setScale(float scale) {
+      this.scale = scale;
+    }
 
     public float getScale() => scale;
   }

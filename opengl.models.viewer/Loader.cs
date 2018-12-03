@@ -3,7 +3,7 @@ using OpenTK.Graphics.OpenGL4;
 
 namespace opengl.models.viewer {
   /// <summary>
-  /// Represents loader.
+  /// Loader.
   /// Loads data into the memory of a video card using VAO's and VBO's.
   /// </summary>
   class Loader {

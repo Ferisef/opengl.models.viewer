@@ -1,7 +1,7 @@
 ﻿
 namespace opengl.models.viewer {
   /// <summary>
-  /// Represents model data.
+  /// Model data.
   /// </summary>
   public class ModelData {
     private float[] vertices;
@@ -11,7 +11,7 @@ namespace opengl.models.viewer {
     private float furthestPoint;
 
     /// <summary>
-    /// ModelData constructor.
+    /// Constructor.
     /// </summary>
     /// <param name="vertices">Array of vertices.</param>
     /// <param name="texCoords">Array of texture coords.</param>

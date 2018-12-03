@@ -25,34 +25,36 @@ namespace opengl.models.viewer {
       length = position.Length;
     }
 
-    public int getIndex() => index;
-
-    public float getLength() => length;
-
-    public bool isSet() => (texIndex != NO_INDEX) && (normalIndex != NO_INDEX);
-
-    public bool hasSameTextureAndNormal(int texIndexOther, int normalIndexOther) {
-      return (texIndexOther == texIndex) && (normalIndexOther == normalIndex);
-    }
-
     public Vector3 getPosition() => position;
-
-    public int getTexIndex() => texIndex;
 
     public void setTexIndex(int index) {
       texIndex = index;
     }
 
-    public int getNormalIndex() => normalIndex;
+    public int getTexIndex() => texIndex;
 
     public void setNormalIndex(int index) {
       normalIndex = index;
     }
 
-    public Vertex getDuplicateVertex() => duplicateVertex;
+    public int getNormalIndex() => normalIndex;
 
     public void setDuplicateVertex(Vertex vertex) {
       duplicateVertex = vertex;
+    }
+
+    public Vertex getDuplicateVertex() => duplicateVertex;
+
+    public int getIndex() => index;
+
+    public float getLength() => length;
+
+    public bool isSet() {
+      return (texIndex != NO_INDEX) && (normalIndex != NO_INDEX);
+    }
+
+    public bool hasSameTextureAndNormal(int texIndexOther, int normalIndexOther) {
+      return (texIndexOther == texIndex) && (normalIndexOther == normalIndex);
     }
   }
 }

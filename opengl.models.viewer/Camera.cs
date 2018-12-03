@@ -3,7 +3,7 @@ using OpenTK.Input;
 
 namespace opengl.models.viewer {
   /// <summary>
-  /// Represents camera.
+  /// Camera.
   /// </summary>
   class Camera {
     private static readonly float STEP = 0.2f;
@@ -13,8 +13,15 @@ namespace opengl.models.viewer {
     private float yaw;
     private float roll;
 
+    /// <summary>
+    /// Constructor.
+    /// </summary>
     public Camera() { }
 
+    /// <summary>
+    /// Camera move.
+    /// </summary>
+    /// <param name="keyboard">Keyboard.</param>
     public void move(KeyboardState keyboard) {
       if (keyboard.IsKeyDown(Key.W)) {
         position.Z -= STEP;
